@@ -70,19 +70,14 @@ h1, h2, h3, h4, h5 {
 .container {
     max-width: 880px;
     margin: 0 auto;
+    width: 95%;
     display: flex;
     flex-direction: column;
 }
 
 @media ( max-width: 800px ) {
     .container {
-        margin-left: 2.5%;
-    }
-}
-
-@media ( max-width: 800px ) {
-    .container {
-        margin-left: -1%;
+        /* margin-left: 3.5%; */
     }
 }
 
@@ -111,7 +106,7 @@ header {
 }
 
 header nav a { 
-    margin-right: 57px;
+    margin-right: 51px;
     color: #aeaeb8;
     text-decoration: none;
     font-size: 1rem;
@@ -305,6 +300,10 @@ header nav a {
 
 .main-content {
     border-bottom: 2px solid black;
+}
+
+.middle-img {
+    width: 100%;
 }
 
 @media ( max-width: 800px ) {
