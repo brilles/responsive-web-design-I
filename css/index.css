@@ -68,10 +68,16 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 .container {
-    width: 880px;
-    margin: auto;
+    max-width: 880px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+}
+
+@media ( max-width: 800px ) {
+    .container {
+        margin-left: 2.5%;
+    }
 }
 
 /* HEADER */
@@ -82,6 +88,14 @@ header {
     align-items: center;
 }
 
+@media ( max-width: 800px ) {
+    header {
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 header nav a { 
     margin-right: 57px;
     color: #aeaeb8;
@@ -89,10 +103,30 @@ header nav a {
     font-size: 1rem;
 }
 
-header img {
-    margin-left: 36px;
+@media ( max-width: 800px ) {
+    header nav  {
+        margin-left: 2%;
+        margin-top: 5.2%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+@media ( max-width: 800px ) {
+    header nav a {
+        margin-right: 34px;
+    }
+}
+
+@media ( max-width: 800px ) {
+    header img {
+        order: -1;
+        margin-left: 2%;
+    }
+}
+
+/* CTA */
 .cta {
     margin-top: 7%;
     display: flex;
@@ -100,6 +134,19 @@ header img {
     padding-bottom: 8.3%;
     border-bottom: 2px solid black;
     margin-bottom: 4.2%;
+}
+
+@media ( max-width: 800px ) {
+    .cta {
+        margin-top: 8.3%;
+        justify-content: center;
+    }
+}
+
+@media ( max-width: 800px ) {
+    .cta img {
+        display: none;
+    }
 }
 
 .cta-text {
@@ -111,8 +158,19 @@ header img {
     margin-right: 9.2%;
 }
 
-.cta-text h1 {
-    margin-bottom: 8%;
+@media ( max-width: 800px ) {
+    .cta {
+        padding-bottom: 9.1%;
+        margin-bottom: 5%;
+    }
+}
+@media ( max-width: 800px ) {
+    .cta .cta-text {
+        margin-left: 11%;
+    }
+    .cta h1 {
+        margin-bottom: 7%;
+    }
 }
 
 .cta button {
@@ -124,8 +182,27 @@ header img {
     font-weight: bold;
 }
 
+/* MAIN CONTENT*/
+@media ( max-width: 800px ) {
+    .text-content {
+        margin-left: 1.4%; 
+    }
+}
 .top-content, .bottom-content {
     display: flex;
+}
+
+@media ( max-width: 800px ) {
+    .top-content, .bottom-content {
+        margin-right: -2%;
+    }
+}
+
+@media ( max-width: 800px ) {
+    .main-content {
+        padding-bottom: 3%; 
+        margin-bottom: 1%;
+    }
 }
 
 .top-content p {
@@ -148,8 +225,25 @@ header img {
     border-bottom: 2px solid black;
 }
 
+@media ( max-width: 800px ) {
+    .middle-img {
+        margin-top: 3.3%;
+        margin-bottom: .6%;
+        height: 90%;
+        width: 100%;
+    }
+}
+
+/* CONTACT AND FOOTER */
 .contact {
     margin-top: 3.7%;
+}
+
+@media ( max-width: 800px) {
+    .contact {
+        margin-left: 1.2%;
+        margin-bottom: .5%;
+    }
 }
 
 footer {
@@ -157,96 +251,13 @@ footer {
     text-align: center;
 }
 
-
-/*
-
-.cta {
-    margin-top: 61px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 70px;
-    text-align: center;
-    padding-bottom: 20px;
+@media ( max-width: 800px) {
+    footer {
+        margin-left: 2%;
+    }
 }
 
-.cta-text {
-     display: flex;
-    flex-direction: column;
-    margin: 49px 84px;
-    justify-content: center;
-}
-
-.cta img {
-    height: 379px;
-    width: 379px;
-}
-
-.cta button {
-    background: white;
-    font-size: 15px;
-    border: 1px solid black;
-    width: 171px;
-    height: 32px;
-    margin: 10px 57px;
-}
-
-.main-content {
-    margin-top: 50px;
-    padding-top: 37px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    font-size: 15px;
-}
-
-.top-content {
-  justify-self: auto;
-}
-
-.main-content .middle-img {
-  width: auto;
-  margin-top: 4px;
-}
-
-.main-content .top-content {
-  display: flex;
-  font-size: 14px;
-  margin-bottom: 35px;
-  justify-content: space-between;
-}
-
-.main-content .bottom-content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
-  margin-top: 35px;
-  font-size: 14px;
-}
-
-p {
-    margin-right: 11px;
-    font-size: 16px;
-}
-
-.contact {
-  margin-top: 38px;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-footer {
-  font-size: 14px;
-  margin: 40px auto 90px auto;
-  display: flex;
-  justify-content: center;
-}
-
-p {
-  line-height: 1.1;
-}
-
-@media( max-width: 800px ) {
+/* @media( max-width: 800px ) {
     .container {
         width: 100%;
         margin: 0 auto;
@@ -302,9 +313,9 @@ p {
     .contact {
         margin-left: 23px;
     }
-}
+} */
 
-@media( max-width: 500px ) {
+/* @media( max-width: 500px ) {
     .container {
         width: 100%;
         margin: auto;
@@ -385,7 +396,7 @@ p {
         margin-top: 19px;
         margin-bottom: 48px;
     }
-}
+} */
 
 
  */
